@@ -1,0 +1,54 @@
+name: reddit-radar-collect
+
+# REDDIT_RADAR_BRIDGE_GATE scheduled collector.
+#
+# COST GATE (2026-09, verified against GitHub pricing docs):
+#   - On a PUBLIC repository, GitHub Actions standard runners are free with
+#     no minute limit. This workflow uses only ubuntu-latest (standard), the
+#     built-in GITHUB_TOKEN, and first-party actions (checkout, setup-python).
+#     -> $0/month on a public repo.
+#   - On a PRIVATE repo the free tier is 2,000 min/month. This schedule
+#     (every 20 min, ~5-8 min/run) would consume ~5,000-11,000 min/month and
+#     CAN INCUR CHARGES. Do not enable this workflow on a private repo.
+#   - Scheduled workflows may be delayed or skipped under GitHub load; never
+#     assume on-time execution. Real run times are recorded by the collector
+#     in data/state.json (last_run_at) and data/health.json (run_at), and
+#     every feed line carries its own fetched_at.
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reddit-radar-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run collector (full sweep, per-sub failure isolation)
+        run: python collector/run.py
+
+      - name: Commit data feed
+        run: |
+          git config user.name "radar-collector-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "no data changes this run"
+          else
+            git commit -m "collect: $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+            git push
+          fi
