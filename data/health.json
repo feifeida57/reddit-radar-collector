@@ -1,31 +1,56 @@
 {
   "status": "COLLECTOR_OK",
-  "generated_at": "2026-09-14T08:19:00Z",
-  "run_at": "2026-09-14T08:18:12Z",
-  "last_successful_run": "2026-09-14T08:18:12Z",
+  "generated_at": "2026-09-14T14:00:01Z",
+  "run_at": "2026-09-14T13:54:02Z",
+  "last_successful_run": "2026-09-14T13:54:02Z",
   "consecutive_full_failures": 0,
   "empty_feed_is_not_no_opportunity": true,
   "notes": [],
   "last_run": {
-    "run_at": "2026-09-14T08:18:12Z",
+    "run_at": "2026-09-14T13:54:02Z",
     "subs": {
-      "SaaS": {
+      "smallbusiness": {
+        "status": "ok",
+        "fetched": 13,
+        "error": null
+      },
+      "Entrepreneur": {
         "status": "ok",
         "fetched": 0,
+        "error": null
+      },
+      "ecommerce": {
+        "status": "ok",
+        "fetched": 1,
+        "error": null
+      },
+      "shopify": {
+        "status": "ok",
+        "fetched": 2,
+        "error": null
+      },
+      "EtsySellers": {
+        "status": "ok",
+        "fetched": 4,
+        "error": null
+      },
+      "SaaS": {
+        "status": "ok",
+        "fetched": 25,
         "error": null
       }
     },
     "reddit_stats": {
-      "ok": 1,
+      "ok": 6,
       "failed": 0,
       "rate_limited": 0,
       "fallback_used": 0,
       "http_403": 0
     },
-    "subs_ok": 1,
+    "subs_ok": 6,
     "subs_failed": 0,
-    "new_posts": 0,
+    "new_posts": 45,
     "duplicates_skipped": 0,
-    "feed_lines": 77
+    "feed_lines": 119
   }
 }
