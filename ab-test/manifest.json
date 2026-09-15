@@ -1,0 +1,27 @@
+{
+  "experiment": "FORMAL_RADAR_INTEGRATION_SOURCE_AB_48H",
+  "status": "RUNNING",
+  "t0": "2026-09-15T14:06:00+08:00",
+  "end_at": "2026-09-17T14:06:00+08:00",
+  "core_subreddits": ["smallbusiness", "Entrepreneur", "ecommerce", "shopify", "EtsySellers", "SaaS"],
+  "source_a": "GPT_PUBLIC_SEARCH",
+  "source_b": "REDDIT_RSS_COLLECTOR",
+  "scoring_brain": "EXISTING_OPPORTUNITY_RADAR_RUBRIC_UNCHANGED",
+  "long_tail_policy": "Existing Reddit public search outside the six core subreddits continues for coverage but is excluded from core A/B metrics.",
+  "metrics": [
+    "source_raw_seen",
+    "source_eligible_candidates",
+    "high_value_found",
+    "rss_only_high_value",
+    "gpt_only_high_value",
+    "both_high_value",
+    "first_seen_latency_minutes",
+    "source_precision"
+  ],
+  "decision_rules": {
+    "CANARY_PASS": "RSS produces real incremental HIGH_VALUE without materially reducing coverage.",
+    "CANARY_STRONG_PASS": "RSS is materially faster on core subreddits and RSS-only HIGH_VALUE >= 20% of all HIGH_VALUE in the core A/B set.",
+    "STOP": "RSS adds mostly noise, becomes frequently STALE/DEGRADED, or the integration causes material misses."
+  },
+  "formal_replacement_authorized": false
+}
