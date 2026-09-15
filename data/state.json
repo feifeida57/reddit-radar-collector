@@ -1,16 +1,16 @@
 {
-  "last_successful_run": "2026-09-15T11:53:51Z",
+  "last_successful_run": "2026-09-15T16:49:03Z",
   "subreddit_cursors": {
-    "smallbusiness": "1wgx8z7",
-    "Entrepreneur": "1wgu0fz",
-    "ecommerce": "1wgxpx8",
-    "shopify": "1wgvfxk",
-    "EtsySellers": "1wgwwgp",
-    "SaaS": "1wgxpxx"
+    "smallbusiness": "1wh5kve",
+    "Entrepreneur": "1wgzave",
+    "ecommerce": "1wh3ff2",
+    "shopify": "1wh3cia",
+    "EtsySellers": "1wh0dg8",
+    "SaaS": "1wh5ttp"
   },
-  "seen_count": 222,
-  "total_seen_count": 396,
+  "seen_count": 236,
+  "total_seen_count": 459,
   "consecutive_full_failures": 0,
-  "last_run_at": "2026-09-15T11:53:51Z",
+  "last_run_at": "2026-09-15T16:49:03Z",
   "last_run_result": "ok"
 }
