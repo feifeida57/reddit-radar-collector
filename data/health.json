@@ -1,17 +1,17 @@
 {
   "status": "COLLECTOR_OK",
-  "generated_at": "2026-10-10T02:31:59Z",
-  "run_at": "2026-10-10T02:26:06Z",
-  "last_successful_run": "2026-10-10T02:26:06Z",
+  "generated_at": "2026-10-10T09:06:00Z",
+  "run_at": "2026-10-10T09:00:08Z",
+  "last_successful_run": "2026-10-10T09:00:08Z",
   "consecutive_full_failures": 0,
   "empty_feed_is_not_no_opportunity": true,
   "notes": [],
   "last_run": {
-    "run_at": "2026-10-10T02:26:06Z",
+    "run_at": "2026-10-10T09:00:08Z",
     "subs": {
       "smallbusiness": {
         "status": "ok",
-        "fetched": 0,
+        "fetched": 13,
         "error": null
       },
       "Entrepreneur": {
@@ -21,22 +21,22 @@
       },
       "ecommerce": {
         "status": "ok",
-        "fetched": 2,
+        "fetched": 0,
         "error": null
       },
       "shopify": {
         "status": "ok",
-        "fetched": 4,
+        "fetched": 3,
         "error": null
       },
       "EtsySellers": {
         "status": "ok",
-        "fetched": 3,
+        "fetched": 2,
         "error": null
       },
       "SaaS": {
         "status": "ok",
-        "fetched": 5,
+        "fetched": 10,
         "error": null
       }
     },
@@ -49,7 +49,7 @@
     },
     "subs_ok": 6,
     "subs_failed": 0,
-    "new_posts": 15,
+    "new_posts": 29,
     "duplicates_skipped": 0,
     "feed_lines": 174
   }
