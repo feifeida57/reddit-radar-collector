@@ -1,13 +1,13 @@
 {
   "status": "COLLECTOR_OK",
-  "generated_at": "2026-11-21T22:13:01Z",
-  "run_at": "2026-11-21T22:07:48Z",
-  "last_successful_run": "2026-11-21T22:07:48Z",
+  "generated_at": "2026-11-22T02:27:04Z",
+  "run_at": "2026-11-22T02:21:25Z",
+  "last_successful_run": "2026-11-22T02:21:25Z",
   "consecutive_full_failures": 0,
   "empty_feed_is_not_no_opportunity": true,
   "notes": [],
   "last_run": {
-    "run_at": "2026-11-21T22:07:48Z",
+    "run_at": "2026-11-22T02:21:25Z",
     "subs": {
       "smallbusiness": {
         "status": "ok",
